@@ -358,6 +358,7 @@
     <!-- Modal for Adding Contact -->
     <div id="contact-modal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
         <div class="bg-white rounded-xl p-6 w-full max-w-md shadow-lg">
+            <h3 class="text-lg font-bold mb-4">Add Customer / Supplier</h3>
             <div class="space-y-3">
                 <div>
                     <label class="text-xs text-slate-600">Name</label>
@@ -597,7 +598,6 @@
             lastCompletedOrder = newOrder;
             saveData();
 
-            // Automatically open print dialog for thermal receipt
             prepareAndPrintReceipt(newOrder);
 
             cart = [];
@@ -790,7 +790,7 @@
         function saveContact() {
             let name = document.getElementById('con-name').value;
             let type = document.getElementById('con-type').value;
-            let phone = document.getElementById('con-phone-field")'] || document.getElementById('con-phone').value;
+            let phone = document.getElementById('con-phone').value;
             let balance = parseFloat(document.getElementById('con-balance').value) || 0;
 
             if(!name) { alert('Name required'); return; }
